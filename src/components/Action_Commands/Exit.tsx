@@ -6,6 +6,15 @@ if (action === "Exit" || action === "E") {
     quitGame();
  */
 
+// Fucntion that handles Quiting the game.
+function quitGame() {
+  colorChangeWords(
+    `\nThis is where the Adventure of ${heroName} comes to an end.\n`,
+    highlightedWords
+  );
+  process.exit();
+}
+
 const Exit = () => {
   return (
     <div>Exit</div>

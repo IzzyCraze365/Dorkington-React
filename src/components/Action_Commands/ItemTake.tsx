@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 /* 
 if (action === "Take" || action === "T") {
@@ -39,10 +39,17 @@ if (action === "Take" || action === "T") {
     }
  */
 
-const ItemTake = () => {
-  return (
-    <div>ItemTake</div>
-  )
+// This is what allows "Take" and "Drop" to work with items
+function itemExchange(giver, receiver, itemToBeExchanged) {
+  let index = giver.indexOf(itemToBeExchanged);
+  if (index !== -1) {
+    giver.splice(index, 1);
+    receiver.push(itemToBeExchanged);
+  }
 }
 
-export default ItemTake
+const ItemTake = () => {
+  return <div>ItemTake</div>;
+};
+
+export default ItemTake;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 /* 
 if (action === "Backpack" || action === "B") {
@@ -6,10 +6,15 @@ if (action === "Backpack" || action === "B") {
     itemDisplay(hero.inventory);
  */
 
-const Backpack = () => {
-  return (
-    <div>Backpack</div>
-  )
+function itemDisplay(player) {
+  colorChangeWords(
+    `\nYour backpack contains the following items: ${player.join(", ")}`,
+    highlightedWords
+  );
 }
 
-export default Backpack
+const Backpack = () => {
+  return <div>Backpack</div>;
+};
+
+export default Backpack;
