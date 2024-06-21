@@ -40,3 +40,120 @@
 .read-the-docs {
   color: #888;
 }
+
+/* I added the following CSS to React */
+
+#title {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+}
+
+.title_words {
+  display: flex;
+  background-color: rgba(255, 100, 100, 0.25);
+  justify-content: center; /* This centers the words left to right */
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: aqua;
+}
+.game_screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers content left to night */
+  background-color: gray;
+  width: 75%;
+  min-height: 500px;
+  margin: 1%;
+}
+
+.display_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  width: 60%;
+  height: auto;
+  min-height: 200px;
+  margin: 1%;
+}
+
+#adventure_text {
+  display: flex;
+  flex-direction: column;
+  background-color: purple;
+  width: 100%;
+  height: auto;
+  margin: 0 5px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 25%;
+  height: auto;
+  margin: 1%;
+}
+
+.button {
+  color: white;
+  text-align: center; /* Todo this isn't reading right */
+  background-color: orange;
+  border: 3px solid black;
+  border-radius: 50%; /* 30px; */
+  width: 25%;
+  height: auto;
+  padding: 10% 5%;
+}
+
+.button:hover {
+  color: orange;
+  background-color: blue;
+  border: 10px solid white;
+  width: 40%;
+}
+
+.button_line {
+  display: flex;
+  flex-direction: row;
+  background-color: pink;
+  /* align-items: flex-start; */
+  justify-content: space-around;
+  width: 95%;
+  padding: 2%;
+}
+
+.input_commands {
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  width: 100%;
+  height: auto;
+  padding: 5%;
+  margin: 10px 0;
+}
+
+#game_log {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: lightblue;
+  width: 100%;
+  max-height: 500px;
+}
+
+/* This is for mobile only games */
+@media only screen and (max-width: 980px) {
+  #title {
+    display: none;
+  }
+}

@@ -9,10 +9,10 @@ import Move from "./Move";
 import Status from "./Status";
 import Exit from "./Exit";
 
-const ActionPanel = () => {
+const ActionPanel = (props: any) => {
   return (
     <>
-      <div className="p-4 mb-2 bg-secondary boarder border-danger rounded-circle">
+      <div className="p-4 mb-2 bg-secondary boarder border-danger rounded-circle align-middle">
         <div className="m-1">
           <Move>Move</Move>
           <Interact>Interact</Interact>
