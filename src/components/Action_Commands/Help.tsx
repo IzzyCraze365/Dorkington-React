@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons";
 
 /* if (action === "Help" || action === "H") {
     //Brings up the Help Menu
@@ -11,8 +12,19 @@ function helpMenu() {
   );
 }
 
-const Help = () => {
-  return <div>Help</div>;
+const Help = (props: any) => {
+  return (
+    <>
+      <Buttons
+        color="info"
+        onClick={() => {
+          console.log("Help Clicked");
+        }}
+      >
+        Help
+      </Buttons>
+    </>
+  );
 };
 
 export default Help;

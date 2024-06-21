@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Exit" || action === "E") {
@@ -15,10 +16,19 @@ function quitGame() {
   process.exit();
 }
 
-const Exit = () => {
+const Exit = (props: any) => {
   return (
-    <div>Exit</div>
-  )
-}
+    <>
+      <Buttons
+        color="danger"
+        onClick={() => {
+          console.log("Exit Clicked");
+        }}
+      >
+        Exit
+      </Buttons>
+    </>
+  );
+};
 
-export default Exit
+export default Exit;

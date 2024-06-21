@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Status" || action === "S") {
@@ -9,10 +10,19 @@ if (action === "Status" || action === "S") {
   }
  */
 
-const Status = () => {
+const Status = (props: any) => {
   return (
-    <div>Status</div>
-  )
-}
+    <>
+      <Buttons
+        color="info"
+        onClick={() => {
+          console.log("Status Clicked");
+        }}
+      >
+        Status
+      </Buttons>
+    </>
+  );
+};
 
-export default Status
+export default Status;

@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Move" || action === "M") {
@@ -98,8 +99,19 @@ function locationUpdate(newLocation) {
   }
 }
 
-const Move = () => {
-  return <div>Move</div>;
+const Move = (props: any) => {
+  return (
+    <>
+      <Buttons
+        color="primary"
+        onClick={() => {
+          console.log("Move Clicked");
+        }}
+      >
+        Move
+      </Buttons>
+    </>
+  );
 };
 
 export default Move;

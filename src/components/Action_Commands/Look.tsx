@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Look" || action === "L") {
@@ -23,10 +24,19 @@ if (action === "Look" || action === "L") {
     }
  */
 
-const Look = () => {
+const Look = (props: any) => {
   return (
-    <div>Look</div>
-  )
-}
+    <>
+      <Buttons
+        color="info"
+        onClick={() => {
+          console.log("Look Clicked");
+        }}
+      >
+        Look
+      </Buttons>
+    </>
+  );
+};
 
-export default Look
+export default Look;

@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Backpack" || action === "B") {
@@ -13,8 +14,19 @@ function itemDisplay(player) {
   );
 }
 
-const Backpack = () => {
-  return <div>Backpack</div>;
+const Backpack = (props: any) => {
+  return (
+    <>
+      <Buttons
+        color="info"
+        onClick={() => {
+          console.log("Backpack Clicked");
+        }}
+      >
+        Backpack
+      </Buttons>
+    </>
+  );
 };
 
 export default Backpack;

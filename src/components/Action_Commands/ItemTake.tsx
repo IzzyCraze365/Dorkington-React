@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Take" || action === "T") {
@@ -48,8 +49,19 @@ function itemExchange(giver, receiver, itemToBeExchanged) {
   }
 }
 
-const ItemTake = () => {
-  return <div>ItemTake</div>;
+const ItemTake = (props: any) => {
+  return (
+    <>
+      <Buttons
+        color="primary"
+        onClick={() => {
+          console.log("Take Item Clicked");
+        }}
+      >
+        Take Item
+      </Buttons>
+    </>
+  );
 };
 
 export default ItemTake;

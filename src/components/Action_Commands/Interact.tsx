@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Interact" || action === "I") {
@@ -55,10 +56,19 @@ if (action === "Interact" || action === "I") {
     }
  */
 
-const Interact = () => {
+const Interact = (props: any) => {
   return (
-    <div>Interact</div>
-  )
-}
+    <>
+      <Buttons
+        color="primary"
+        onClick={() => {
+          console.log("Interact Clicked");
+        }}
+      >
+        Interact
+      </Buttons>
+    </>
+  );
+};
 
-export default Interact
+export default Interact;

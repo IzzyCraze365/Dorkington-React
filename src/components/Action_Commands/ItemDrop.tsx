@@ -1,4 +1,5 @@
 import React from "react";
+import Buttons from "../Buttons";
 
 /* 
 if (action === "Drop" || action === "D") {
@@ -33,8 +34,19 @@ function itemExchange(giver, receiver, itemToBeExchanged) {
   }
 }
 
-const ItemDrop = () => {
-  return <div>ItemDrop</div>;
+const ItemDrop = (props: any) => {
+  return (
+    <>
+      <Buttons
+        color="primary"
+        onClick={() => {
+          console.log("Drop Item Clicked");
+        }}
+      >
+        Drop Item
+      </Buttons>
+    </>
+  );
 };
 
 export default ItemDrop;
