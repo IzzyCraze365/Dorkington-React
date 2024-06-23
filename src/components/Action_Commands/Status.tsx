@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Buttons from "../Buttons";
+
+const [heroStatus, setHeroStatus] = useState("Healthy")
 
 /* 
 if (action === "Status" || action === "S") {
@@ -9,6 +11,8 @@ if (action === "Status" || action === "S") {
     unknownPrompt(action);
   }
  */
+
+//TODO get the usestate to work
 
 const Status = (props: any) => {
   return (
@@ -21,6 +25,7 @@ const Status = (props: any) => {
       >
         Status
       </Buttons>
+     <p>{"Status = "&&{heroStatus}}</p>
     </>
   );
 };
