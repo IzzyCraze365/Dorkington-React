@@ -3,7 +3,7 @@ let randomNumber = randomNum(1, 13);
 //TODO Need to add the typings
 
 // The options for our Secret Name (Key Puzzle) can change thanks to the switch
-let secretName = "";
+let secretName: string = "";
 switch (randomNumber) {
   case 1:
     secretName = "Rob Vanarsdall";
@@ -133,15 +133,15 @@ let highlightedWords:string = [
 //! Classes Go Here = FIRST THING!!!
 // Player's Backpack Inventory Management
 class Player {
-  constructor(name, inventory, status) {
+  constructor(name: string, inventory: Array, status: string) {
     (this.name = name), (this.inventory = inventory);
     this.status = status;
   }
 }
-
+// TODO still need to set up typing
 // A List of All Interactable Items
 class Commodity {
-  constructor({ name, altNames:, interact, followUp }) {
+  constructor({ name, altNames, interact, followUp }) {
     this.name = name;
     this.altNames = altNames;
     this.interact = interact;
