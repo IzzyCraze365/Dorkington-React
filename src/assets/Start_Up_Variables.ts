@@ -1,9 +1,12 @@
-let randomNumber = randomNum(1, 13);
+import { randomNum } from "../utilities/Math_Helpers";
+
+let randomNumber: number = randomNum(1, 13);
 
 //TODO Need to add the typings
 
 // The options for our Secret Name (Key Puzzle) can change thanks to the switch
-let secretName: string = "";
+// TODO eventually make the secretName pull a name from the Array of high scores
+export let secretName: string = "";
 switch (randomNumber) {
   case 1:
     secretName = "Rob Vanarsdall";
@@ -49,91 +52,92 @@ switch (randomNumber) {
 }
 
 // A list of words that I want to have in Yellow Text
-let highlightedWords:string = [
-  secretName,
-  /*Hero Actions*/
-  `"Move"`,
-  `"m"`,
-  `"Backpack"`,
-  `"b"`,
-  `"Look"`,
-  `"l"`,
-  `Items`,
-  `"Status"`,
-  `"s"`,
-  `Healthy`,
-  `"Interact"`,
-  `"i"`,
-  `"Take"`,
-  `"t"`,
-  `"Drop"`,
-  `"d"`,
-  `"Help"`,
-  `"h"`,
-  `"Exit"`,
-  `"e"`,
-  /*Characters & Interact spots*/
-  `Adventurer`,
-  `Retired`,
-  `Simple Villager`,
-  `Innkeeper`,
-  `Obnoxious Patron`,
-  `Musician With A Broken Arm`,
-  `Sleeping Child`,
-  `Exhausted Parents`,
-  `Crooked Sign`,
-  `Letterbox`,
-  `Dragon`,
-  `Mounds Of Gold`,
-  `Heaps Of Silver`,
-  `Pile Of Bones`,
-  `Grim Reaper`,
-  /*Inventory Items*/
-  `Sword`,
-  `Gold`,
-  `Premium Horse Manure`,
-  `Bucket`,
-  `Bag Of Jewels`,
-  `Warm Meal`,
-  `Town Map`,
-  `Warm Apple Pie`,
-  `Damaged Lute`,
-  `Pointless Rock`,
-  "'s Treasure",
-  `Death's Scythe`,
-  /*Locations*/
-  `Dorkington`,
-  `Town Triangle`,
-  `Idiot's Inspiring Inn`,
-  `Upstairs Room`,
-  `Forlorn Forest Of Fatality`,
-  `Deep Woods Of Certain Doom`,
-  `Hag's Horrid Hovel`,
-  "'s Keep",
-  `Underworld`,
-  /*Status*/
-  `Black Eye`,
-  `Dead`,
-  `Justly Deceased`,
-  `Dead (again)`,
-  `Alive Once More & Healthier than Ever`,
-  /*Other*/
-  `the Mighty`,
-  `the Mightier`,
-  `Squire`,
-  `Hero`,
-  `Were-verine`,
-  `Town Guards`,
-  `Murder`,
-  `justice`,
-  `Demonic Voice`,
-  `Demonic Spirit`,
-];
+const highlightedWords: string[] /* This declares that it is an array of strings in TS */ =
+  [
+    secretName,
+    /*Hero Actions*/
+    `"Move"`,
+    `"m"`,
+    `"Backpack"`,
+    `"b"`,
+    `"Look"`,
+    `"l"`,
+    `Items`,
+    `"Status"`,
+    `"s"`,
+    `Healthy`,
+    `"Interact"`,
+    `"i"`,
+    `"Take"`,
+    `"t"`,
+    `"Drop"`,
+    `"d"`,
+    `"Help"`,
+    `"h"`,
+    `"Exit"`,
+    `"e"`,
+    /*Characters & Interact spots*/
+    `Adventurer`,
+    `Retired`,
+    `Simple Villager`,
+    `Innkeeper`,
+    `Obnoxious Patron`,
+    `Musician With A Broken Arm`,
+    `Sleeping Child`,
+    `Exhausted Parents`,
+    `Crooked Sign`,
+    `Letterbox`,
+    `Dragon`,
+    `Mounds Of Gold`,
+    `Heaps Of Silver`,
+    `Pile Of Bones`,
+    `Grim Reaper`,
+    /*Inventory Items*/
+    `Sword`,
+    `Gold`,
+    `Premium Horse Manure`,
+    `Bucket`,
+    `Bag Of Jewels`,
+    `Warm Meal`,
+    `Town Map`,
+    `Warm Apple Pie`,
+    `Damaged Lute`,
+    `Pointless Rock`,
+    "'s Treasure",
+    `Death's Scythe`,
+    /*Locations*/
+    `Dorkington`,
+    `Town Triangle`,
+    `Idiot's Inspiring Inn`,
+    `Upstairs Room`,
+    `Forlorn Forest Of Fatality`,
+    `Deep Woods Of Certain Doom`,
+    `Hag's Horrid Hovel`,
+    "'s Keep",
+    `Underworld`,
+    /*Status*/
+    `Black Eye`,
+    `Dead`,
+    `Justly Deceased`,
+    `Dead (again)`,
+    `Alive Once More & Healthier than Ever`,
+    /*Other*/
+    `the Mighty`,
+    `the Mightier`,
+    `Squire`,
+    `Hero`,
+    `Were-verine`,
+    `Town Guards`,
+    `Murder`,
+    `justice`,
+    `Demonic Voice`,
+    `Demonic Spirit`,
+  ];
 
 //! Classes Go Here = FIRST THING!!!
 // Player's Backpack Inventory Management
 class Player {
-  constructor(name: string, inventory: Array, status: string) {
+  constructor(name: string, inventory: string[], status: string) {
     (this.name = name), (this.inventory = inventory);
     this.status = status;
   }

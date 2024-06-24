@@ -31,7 +31,7 @@ const ActionPanel = (props: any) => {
         </div>
         <Exit>Exit</Exit>
       </div>
-      <Status></Status>
+      <Status>Chewey</Status>
     </>
   );
 };
