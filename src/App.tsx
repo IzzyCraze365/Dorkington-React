@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import ActionPanel from "./components/Action_Commands/ActionPanel";
 import Title from "./components/Title";
-import GameWindow from "./components/Action_Commands/GameWindow";
+import GameWindow from "./components/HUD/GameWindow";
 
 function App() {
   const [count, setCount] = useState(0);
