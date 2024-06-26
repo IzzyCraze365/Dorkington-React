@@ -3,17 +3,15 @@ import { useState } from "react";
 
 // Base this off of the ListGroup.tsx but make it so every thing is saved in an array
 
-interface backlogHistoryProps {
+interface backlogProps {
   actions: string[];
   onSelection: (action: string) => void; //similar to an onClick action
 }
 
-function backlogHistory({ actions, onSelection }: backlogHistoryProps) {
+function backlog({ actions, onSelection }: backlogProps) {
   // Initially no item is selected.
   const [actionIndex, setActionIndex] = useState(-1);
-}
 
-const Backlog = () => {
   return (
     <>
       <div>Backlog</div>
@@ -36,6 +34,6 @@ const Backlog = () => {
       </ul>
     </>
   );
-};
+}
 
-export default Backlog;
+export default backlog;
