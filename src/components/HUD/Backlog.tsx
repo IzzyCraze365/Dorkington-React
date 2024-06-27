@@ -8,7 +8,7 @@ interface backlogProps {
   onSelection: (action: string) => void; //similar to an onClick action
 }
 
-function backlog({ actions, onSelection }: backlogProps) {
+function Backlog({ actions, onSelection }: backlogProps) {
   // Initially no item is selected.
   const [actionIndex, setActionIndex] = useState(-1);
 
@@ -36,4 +36,4 @@ function backlog({ actions, onSelection }: backlogProps) {
   );
 }
 
-export default backlog;
+export default Backlog;

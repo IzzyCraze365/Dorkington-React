@@ -16,7 +16,7 @@ function App() {
           <div className="card display_image">
             IMAGE OF LOCATION OR CHARACTER HERE
           </div>
-          <GameWindow>Game Window</GameWindow>
+          {/* <GameWindow>Game Window</GameWindow> */}
           <div className="card">
           <ActionPanel>Action Panel</ActionPanel>
         <button onClick={() => setCount((count) => count + 1)}>

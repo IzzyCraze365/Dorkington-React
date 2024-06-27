@@ -1,11 +1,19 @@
 import React from "react";
 import Buttons from "../Buttons";
+import Backlog from "./Backlog";
+
+/* let actions: string[] = [];
+
+const displayAction = (action: string) => {
+  console.log("displayAction", action);
+}; */
 
 const GameWindow = (props: any) => {
   return (
     <>
       <div className="game_screen">
         <div id="game_log">
+          {/* <Backlog actions={actions} onSelection={displayAction}></Backlog> */}
           <p id="adventure_text">
             Press the START button to begin! lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni in tenetur magnam eligendi odit
             fugiat nisi placeat distinctio corporis maiores ut temporibus rem
@@ -28,7 +36,7 @@ const GameWindow = (props: any) => {
         >
           Start Game
         </Buttons>
-        <button className={"button start"} onclick={"titleScreen()"}>
+        <button className={"button start"} onClick={"titleScreen()"}>
           Start Game
         </button>
       </div>
