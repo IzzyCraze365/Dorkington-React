@@ -7,7 +7,7 @@ import Backlog from "./Backlog";
 const displayAction = (action: string) => {
   console.log("displayAction", action);
 }; */
-
+//todo something is broke
 const GameWindow = (props: any) => {
   return (
     <>
