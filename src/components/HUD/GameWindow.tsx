@@ -8,7 +8,7 @@ const displayAction = (action: string) => {
   console.log("displayAction", action);
 }; */
 //todo something is broken in here
-// props not passing in???
+// props not passing in, this is confusing???
 const GameWindow = (props: any) => {
   return (
     <>
