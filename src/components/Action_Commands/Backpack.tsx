@@ -6,7 +6,7 @@ if (action === "Backpack" || action === "B") {
     // Displays inventory
     itemDisplay(hero.inventory);
  */
-//TODO what I need is a way to pass the Player object a prop
+//TODO what I need is a way to pass the Player object as a prop
 function itemDisplay(player) {
   colorChangeWords(
     `\nYour backpack contains the following items: ${player.join(", ")}`,
