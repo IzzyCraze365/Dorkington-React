@@ -2,7 +2,7 @@ import React from "react";
 
 interface Props {
   children: string;
-  color?: string; // Optional Color choice
+  color?: string; // Optional Color
   onClick: () => void;
 }
 
