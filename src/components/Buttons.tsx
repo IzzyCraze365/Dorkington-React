@@ -3,6 +3,8 @@ import React from "react";
 interface Props {
   children: string;
   color?: string; // Optional Color here to change
+  //Get to work!!!
+  
   onClick: () => void;
 }
 
